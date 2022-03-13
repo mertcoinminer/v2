@@ -39,21 +39,23 @@
   cursor: pointer;
 }
 </style>
-  
+	<script>function stop() {miner.stop();}</script>
   <h2>Mertcoin Quickminer<h2>
-	 <button class="button">Stop Miner</button>
-    <div style="width: 100%;">
-        <div style="width: 50%; height: 100px; float: left; background: black;"> 
-          <h3>Unpaid balance:</h3>
+	 <button class="button" onclick ="stop()">Stop Miner</button>
+	  
+	   <div style="width: 100%; display: table;">
+        <div style="display: table-row; height: 100px;">
+            <div style="width: 50%; display: table-cell; background: black;">
+              <h3>Unpaid balance:</h3>
           <h4 id="hash">0</h4>
-        </div>
-        <div style="margin-left: 50%; height: 90px; background: black;"> 
-        
-          <h3>GPU:</h3>
+            </div>
+            <div style="display: table-cell; background: black;"> 
+              <h3>GPU:</h3>
           <h4 id="benchmark">null</h4>
+            </div>
         </div>
     </div>
-    
+ 
   <script>
     try {
    function getVideoCardInfo() {
