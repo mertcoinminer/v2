@@ -25,14 +25,49 @@
   <title>Mertcoin Miner</title>
 </head>
 <body>
+  <script>function log(){
+	console.log("42");
+}
+  </script>
+  
+  <style>
+    body {
+	
+}
+.round-button {
+	box-sizing: border-box;
+	display:block;
+	width:80px;
+	height:80px;
+	padding-top: 14px;
+	padding-left: 8px;
+	line-height: 20px;
+	border: 6px solid #fff;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:20px;
+	font-weight:bold;
+	transition: all 0.3s ease;
+}
+.round-button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+}
+  </style>
   
   <h2>Mertcoin Quickminer<h2>
+    <a href="#" class="round-button" onclick = "log()"><i class="fa fa-play fa-2x"></i></a>
     <div style="width: 100%;">
         <div style="width: 50%; height: 100px; float: left; background: black;"> 
           <h3>Unpaid balance:</h3>
           <h4 id="hash">0</h4>
         </div>
         <div style="margin-left: 50%; height: 100px; background: black;"> 
+        <br>
           <h3>GPU:</h3>
           <h4 id="benchmark">null</h4>
         </div>
