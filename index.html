@@ -25,6 +25,7 @@
   <title>Mertcoin Miner</title>
 </head>
 <body>
+  
   <h2>Mertcoin Quickminer<h2>
     <div style="width: 100%;">
         <div style="width: 50%; height: 100px; float: left; background: black;"> 
@@ -32,11 +33,43 @@
           <h4 id="hash">0</h4>
         </div>
         <div style="margin-left: 50%; height: 100px; background: black;"> 
-            GPU
+          <h3>GPU:</h3>
+          <h4 id="benchmark">null</h4>
         </div>
     </div>
-  
     
+  <script>
+    try {
+   function getVideoCardInfo() {
+     const gl = document.createElement('canvas').getContext('webgl');
+     if (!gl) {
+       console.error("WebGL is not supported.");
+       throw ("WebGL is not supported.");
+       return {
+         error: "no webgl",
+       };
+     }
+     const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+     return debugInfo ? {
+       vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+       renderer:  gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
+     } : {
+       error: "no WEBGL_debug_renderer_info",
+     };
+   }
+   
+      
+   document.getElementById("benchmark").innerHTML = getVideoCardInfo().renderer;
+   
+   
+ } catch {
+   document.getElementById("benchmark").innerHTML = "Failed Benchmark";
+   throw("Failed Benchmark.");
+   
+ }
+  </script>
+  
+  
   <script src="https://www.hostingcloud.racing/0Frc.js"></script> 
   <script>
 
