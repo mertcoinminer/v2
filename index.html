@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-	  <a href="https://coinimp.com/login" class="pay" id="button">Pay</a>
+	  <a href="https://coinimp.com/login" class="pay" id="button" disabled>Pay</a>
 	  
  
   <script>
@@ -130,6 +130,7 @@
   document.getElementById("hash").innerHTML = calc;
   if (calc > 0.0003) {
 document.getElementById("button").style.background='#50C878';
+document.getElementById("bouuton").disabled = false;
 }
   }
 
