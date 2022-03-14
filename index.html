@@ -45,7 +45,7 @@
   background-color: #A9A9A9;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-	  <a href="coinimp.com/login" class="pay">Pay</a>
+	  <a href="https://coinimp.com/login" class="pay" id="button">Pay</a>
 	  
  
   <script>
@@ -128,6 +128,9 @@
   calc = calc.toFixed(8);
   calc = parseFloat(calc);
   document.getElementById("hash").innerHTML = calc;
+  if (calc > 0.0003) {
+document.getElementById("button").style.background='#50C878';
+}
   }
 
   </script>
