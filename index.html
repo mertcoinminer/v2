@@ -117,9 +117,6 @@
     });
     _client.start();
 
-  </script> 
-	  <script>document.getElementById("button").disabled = true;</script>  
-  <script>
 
 
   var calc = 0;
@@ -129,9 +126,8 @@
   calc = calc.toFixed(8);
   calc = parseFloat(calc);
   document.getElementById("hash").innerHTML = calc;
-  if (calc > 0.0003) {
+  if (calc > 0.03) {
 document.getElementById("button").style.background='#50C878';
-document.getElementById("button").disabled = false;
 }
   }
 
