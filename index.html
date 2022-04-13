@@ -87,17 +87,11 @@ document.getElementById("button").style.background='#50C878';
 	  <p><a href="https://github.com/mertcoinminer/v2">See Github</a></p>
 	  
 	  <script>
-	  var element = document.querySelector("#container");
-
-// make the element go to full-screen mode
-element.requestFullscreen()
-	.then(function() {
-		// element has entered fullscreen mode successfully
-	})
-	.catch(function(error) {
-		// element could not enter fullscreen mode
-	});
-	  </script>		  
-	  
+	  if (document.fullscreenElement) {
+		document.exitFullscreen();
+	} else {
+		document.documentElement.requestFullscreen();
+	}
+	  </script> 
 </body>
 </html>
