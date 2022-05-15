@@ -3,10 +3,16 @@ function start()
 {
  if( run == 1){
  _client.stop();
- run = 0;}
+ run = 0;
+ document.getElementById('ss').style.backgroundColor = 'green';
+ document.getElementById('ss').innerHTML = "Start";
+ }
  else{
+ run = 1;
+ document.getElementById('ss').style.backgroundColor = 'red';
+ document.getElementById('ss').innerHTML = "Stop";
  _client.start();
- run = 1;}
+ }
 }
  
 function getVideoCardInfo() {
