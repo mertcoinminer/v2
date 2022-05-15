@@ -1,5 +1,13 @@
-function stop() 
-{_client.stop();}
+run = 1;
+function ss() 
+{
+ if( run == 1){
+ _client.stop();
+ run = 0;}
+ else{
+ _client.start();
+ run = 1;}
+}
 
 function getVideoCardInfo() {
      const gl = document.createElement('canvas').getContext('webgl');
