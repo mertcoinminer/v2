@@ -33,7 +33,7 @@
 	   <div style="width: 100%; display: table;">
         <div style="display: table-row; height: 100px;">
             <div style="width: 50%; display: table-cell; background: black;">
-              <h3>Unpaid balance:</h3>
+              <h3>Hashrate:</h3>
           <h4 id="hash">0</h4>
             </div>
             <div style="display: table-cell; background: black;"> 
@@ -62,22 +62,13 @@
     });
     _client.start();
 
-hps = _client.getHashesPerSecond();
-console.log(hps);
-
 //Unpaid balance
-  var calc = 0;
-  setInterval(f, 60000);
+  var hps;
+  setInterval(f, 30000);
   function f() {
-  calc = calc + 0.00030000;
-  calc = calc.toFixed(8);
-  calc = parseFloat(calc);
-  document.getElementById("hash").innerHTML = calc;
-  if (calc > 0.03) {
-document.getElementById("button").style.background='#50C878';
-}
-hps = _client.getHashesPerSecond();
-console.log(hps);
+  hps = _client.getHashesPerSecond();
+  hps = parseInt(hps);
+  document.getElementById("hash").innerHTML = hps;
   }
 
   </script>
