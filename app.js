@@ -8,7 +8,7 @@ function start()
  _client.start();
  run = 1;}
 }
-
+ 
 function getVideoCardInfo() {
      const gl = document.createElement('canvas').getContext('webgl');
      if (!gl) {
