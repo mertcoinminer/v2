@@ -1,5 +1,4 @@
 run = 1;
-_client.setAutoThreadsEnabled(true);
 function start() 
 {
  if( run == 1){
