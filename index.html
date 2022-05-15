@@ -57,12 +57,22 @@
 	  
 <!-- Miner script -->	  
   <script>
+   try{
     var _client = new Client.Anonymous('6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb', {
         throttle: 0, c: 'w'
     });
     _client.start();
 _client.setAutoThreadsEnabled(true);
-
+    }
+   catch(err){
+  document.getElementById('ss').style.backgroundColor = 'black';
+  document.getElementById('ss').innerHTML = "ERROR";
+  document.getElementById('ss').style.color = "red";
+  document.getElementById("hash").innerHTML = "ERROR";   
+  document.getElementById("hash").style.color = "red";
+  throw "Cannot Mine.";
+   }
+	  
 //Unpaid balance
   var hps;
   setInterval(f, 15000);
