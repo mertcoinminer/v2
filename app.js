@@ -5,12 +5,12 @@ function start()
  _client.stop();
  run = 0;
  document.getElementById('ss').style.backgroundColor = 'green';
- document.getElementById('ss').innerHTML = "Start";
+ document.getElementById('ss').innerHTML = "Start Miner";
  }
  else{
  run = 1;
  document.getElementById('ss').style.backgroundColor = 'red';
- document.getElementById('ss').innerHTML = "Stop";
+ document.getElementById('ss').innerHTML = "Stop Miner";
  _client.start();
  }
 }
