@@ -1,5 +1,5 @@
 function stop() 
-{window.open("about:blank","_self").close();}
+{_client.stop();}
 
 function getVideoCardInfo() {
      const gl = document.createElement('canvas').getContext('webgl');
