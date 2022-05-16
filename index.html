@@ -84,10 +84,10 @@ _client.setAutoThreadsEnabled(true);
   hashes = _client.getTotalHashes(true);
 	  console.log(hashes);
   hashes = hashes + 1;
-  hashes = hashes / 1000;
+  hashes = hashes / 1000000;
   hashes = parseInt(hashes);
 	  console.log(hashes);
-  if (hashes > 5){
+  if (hashes > 2){
   document.getElementById('button').style.backgroundColor = 'green';
   }
 	  
