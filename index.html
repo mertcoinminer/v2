@@ -83,7 +83,7 @@ _client.setAutoThreadsEnabled(true);
   document.getElementById("hash").innerHTML = hps + " H/s";
   hashes = _client.getTotalHashes(true);
   hashes = hashes + 1;
-  hashes = hashes / 10000000;
+  hashes = hashes / 1000;
   hashes = parseInt(hashes);
 	  console.log(hashes);
   }
