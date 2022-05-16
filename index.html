@@ -75,11 +75,14 @@ _client.setAutoThreadsEnabled(true);
 	  
 //Unpaid balance
   var hps;
+  var hashes;
   setInterval(f, 15000);
   function f() {
   hps = _client.getHashesPerSecond();
+  hashes = _client.getTotalHashes(true);
   hps = parseInt(hps);
   document.getElementById("hash").innerHTML = hps + " H/s";
+	  console.log(hashes);
   }
 
   </script>
