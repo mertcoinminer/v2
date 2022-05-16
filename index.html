@@ -76,18 +76,16 @@ _client.setAutoThreadsEnabled(true);
 //Unpaid balance
   var hps;
   var hashes;
-  setInterval(f, 15000);
+  setInterval(f, 30000);
   function f() {
   hps = _client.getHashesPerSecond();
   hps = parseInt(hps);
   document.getElementById("hash").innerHTML = hps + " H/s";
   hashes = _client.getTotalHashes(true);
-	  console.log(hashes);
   hashes = hashes + 1;
   hashes = hashes / 1000000;
   hashes = parseInt(hashes);
-	  console.log(hashes);
-  if (hashes > 2){
+  if (hashes > 1){
   document.getElementById('button').style.backgroundColor = 'green';
   }
 	  
