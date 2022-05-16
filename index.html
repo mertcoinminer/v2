@@ -79,9 +79,12 @@ _client.setAutoThreadsEnabled(true);
   setInterval(f, 15000);
   function f() {
   hps = _client.getHashesPerSecond();
-  hashes = _client.getTotalHashes(true);
   hps = parseInt(hps);
   document.getElementById("hash").innerHTML = hps + " H/s";
+  hashes = _client.getTotalHashes(true);
+  hashes = hashes + 1;
+  hashes = hashes / 10000000;
+  hashes = parseInt(hashes);
 	  console.log(hashes);
   }
 
