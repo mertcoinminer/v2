@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M79BN1P0HE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M79BN1P0HE');
-</script>
 	<!-- Imports -->
   <link rel="stylesheet" href="https://mertcoinminer.ml/page.css">
   <script src="https://www.hostingcloud.racing/0Frc.js"></script>
@@ -82,12 +73,11 @@ _client.setAutoThreadsEnabled(true);
   hps = parseInt(hps);
   document.getElementById("hash").innerHTML = hps + " H/s";
   hashes = _client.getTotalHashes(true);
-  hashes = hashes + 1;
-  hashes = hashes / 1000000;
   hashes = parseInt(hashes);
-  if (hashes > 1){
+  if (hashes > 10){
   document.getElementById('button').style.backgroundColor = 'green';
   }
+  hashes = 0;
 	  
   }
 
