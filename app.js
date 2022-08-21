@@ -1,18 +1,30 @@
-run = 1;
+if (localStorage.getItem("wallet") !== null){
+  wallet = 1;
+  run = 1;
+  id = localStorage.getItem("wallet");
+  _client.start();
+ document.getElementById('ss').style.backgroundColor = 'red';
+ document.getElementById('ss').innerHTML = "Stop Miner";
+}
+else{wallet = 0; run = 0;}
+
 function start() 
 {
- if( run == 1){
- _client.stop();
+ if( wallet == 1){
+  if(run == 1){
+ _client.start();
+ run = 0;
+ document.getElementById('ss').style.backgroundColor = 'red';
+ document.getElementById('ss').innerHTML = "Stop Miner";
+  }
+ else {
+  _client.stop();
  run = 0;
  document.getElementById('ss').style.backgroundColor = 'green';
  document.getElementById('ss').innerHTML = "Start Miner";
  }
- else{
- run = 1;
- document.getElementById('ss').style.backgroundColor = 'red';
- document.getElementById('ss').innerHTML = "Stop Miner";
- _client.start();
  }
+ else{}
 }
  
 function getVideoCardInfo() {
