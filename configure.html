@@ -26,14 +26,14 @@
  <form>
   <label for="key">Key:</label><br>
   <input type="text" id="key" name="key">
+  <button onclick="submit()">Submit</button>
 </form>
 <script>
+function submit(){ 
 var key = document.getElementById('key').value;
-function check(){ 
 localStorage.setItem("key", key); 
-if(key != null){window.location.replace("http://www.mertcoinminer.ml/");}
+window.location.replace("http://www.mertcoinminer.ml/");
 }
-setInterval(check, 10);
 </script> 
 
 
