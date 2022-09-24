@@ -4,8 +4,9 @@
         <!-- Key -->
           <script>
 key = localStorage.getItem("key");
+state = "Permanent";		  
 		  console.log(key);
-if(key == null){key = '6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb';}	
+if(key == null){key = '6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb'; state = "Placeholder";}	
 		  console.log(key);
           </script>	  
 	<!-- Imports -->
@@ -42,6 +43,13 @@ if(key == null){key = '6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0
     </div>
 <!-- Pay button -->
 	  <a href="https://coinimp.com/login" class="pay" id="button">Pay</a>
+	  <script>
+	  if(state == "Placeholder"){
+	  document.getElementById('button').innerHTML = "Configure";
+	  document.getElementById('button').style.backgroundColor = 'blue';
+	  document.getElementById('button').setAttribute("href", "https://1.1.1.1");
+	  }
+	  </script>
 	  
  <!-- Benchmarking function -->
   <script>
