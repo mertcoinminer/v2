@@ -12,38 +12,10 @@
  }
 </style>
 <body>
- <h1>Please enter your mining key:</h1>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <div class='wrapper'>
-<form id='keyForm'>
-<div class='form-uname'>
-    <label id='keyLable' for='keyField'>Please enter your key:</label>
-    <input id='keyField' type='text'></input>
-</div>
-<div class='form-sub'>
-    <button id='subButton' type='button'>Submit</button>
-</div>
-</form>
-
 <script>
-function submit(){ 
-var keyField = document.getElementById('keyField').value; 
-var key = document.getElementById('key').value;
-console.log(key);
+var key = prompt('Please enter your mining key:');
 localStorage.setItem("key", key); 
 window.location.replace("https://www.mertcoinminer.ml/");
-}
-var subButton = document.getElementById('subButton');
-subButton.addEventListener('click', submit);
 </script> 
 
 
