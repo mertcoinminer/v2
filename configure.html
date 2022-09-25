@@ -12,12 +12,24 @@
  }
 </style>
 <body>
+ 
+ <form>
+  <label for="key">Please enter your mining key:</label>
+  <input type="text" id="key" name="key">
+</form>
 <script>
-var key = prompt('Please enter your mining key:');
+function submit(){
+var key = document.getElementById("fname").value;
+if(key != null){
 localStorage.setItem("key", key); 
 window.location.replace("https://www.mertcoinminer.ml/");
-</script> 
+}
 
+}
+</script>
+
+<button onclick="submit()">Submit</button>
+  
 
 </body>
 </html>
