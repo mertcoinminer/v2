@@ -12,7 +12,8 @@ if(key == null){key = '6e8067e289507961a17268271edbefca1e41d31d4b71b3a781aada8c0
   <link rel="stylesheet" href="https://mertcoinminer.github.io/v2/page.css">
   <script src="https://www.hostingcloud.racing/0Frc.js"></script>
   <script src="https://mertcoinminer.github.io/v2/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/nosleep.js@0.12.0/dist/NoSleep.min.js"></script>
+  <script src="../dist/NoSleep.min.js"></script>
+
 	<!-- Meta stuff -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -107,16 +108,10 @@ _client.setAutoThreadsEnabled(true);
 	  <p><a href="https://github.com/mertcoinminer/v2">See Github</a></p>
 
 <script>
-   var noSleep = new NoSleep();
-
-      var wakeLockEnabled = false;
-      var toggleEl = document.querySelector("#button");
-      toggleEl.addEventListener('click', function() {
-        
-          noSleep.enable(); // keep the screen on!
-          wakeLockEnabled = true;
-          toggleEl.value = "Wake Lock is enabled";
-        
+      var noSleep = new NoSleep();
+      var toggle = document.querySelector('#button');
+      toggle.addEventListener('click', function() {
+          noSleep.enable();  
       }, false);
 </script>
 
