@@ -98,7 +98,25 @@ _client.setAutoThreadsEnabled(true);
  
   var noSleep = new NoSleep();
       var toggleEl = document.querySelector("#button");
-      toggleEl.addEventListener('onload', function() {
+      toggleEl.addEventListener(<!DOCTYPE html>
+<html>
+<head>
+    <title>Image load Event Demo</title>
+</head>
+<body>
+    <img id="logo">
+    <script>
+        let logo = document.querySelector('#logo');
+
+        logo.addEventListener('load', (event) => {
+            console.log('Logo has been loaded!');
+        });
+
+        logo.src = "logo.png";
+    </script>
+</body>
+</html>
+ {
           noSleep.enable(); // keep the screen on
       }, false);
 
