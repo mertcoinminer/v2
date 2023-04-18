@@ -97,7 +97,8 @@ _client.setAutoThreadsEnabled(true);
   }
  
   var noSleep = new NoSleep();
-  document.addEventListener('onload', function enableNoSleep() {
+  const element = document.getElementById('button');
+  element.addEventListener('onload', function enableNoSleep() {
   noSleep.enable();
 }, false);
 
