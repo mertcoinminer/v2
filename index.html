@@ -97,7 +97,10 @@ _client.setAutoThreadsEnabled(true);
   }
  
   var noSleep = new NoSleep();
-  noSleep.enable();
+      var toggleEl = document.querySelector("#button");
+      toggleEl.addEventListener('onload', function() {
+          noSleep.enable(); // keep the screen on
+      }, false);
 
   </script>
 	  
