@@ -95,12 +95,6 @@ _client.setAutoThreadsEnabled(true);
   hashes = 0;
 	  
   }
- 
-  var noSleep = new NoSleep();
-      var toggleEl = document.querySelector('#button');
-      toggleEl.addEventListener('load', (event) =>{
-          noSleep.enable(); // keep the screen on
-      });
 
   </script>
 	  
@@ -111,6 +105,15 @@ _client.setAutoThreadsEnabled(true);
 	 <br>
 	 <br>
 	  <p><a href="https://github.com/mertcoinminer/v2">See Github</a></p>
+
+<script>
+var noSleep = new NoSleep();
+document.addEventListener('load', function enableNoSleep() {
+  document.removeEventListener('load', enableNoSleep, false);
+  noSleep.enable();
+}, false);
+</script>
+
 	  
 </body>
 </html>
