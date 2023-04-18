@@ -107,11 +107,17 @@ _client.setAutoThreadsEnabled(true);
 	  <p><a href="https://github.com/mertcoinminer/v2">See Github</a></p>
 
 <script>
-var noSleep = new NoSleep();
-document.addEventListener('load', function enableNoSleep() {
-  document.removeEventListener('load', enableNoSleep, false);
-  noSleep.enable();
-}, false);
+   var noSleep = new NoSleep();
+
+      var wakeLockEnabled = false;
+      var toggleEl = document.querySelector("#button");
+      toggleEl.addEventListener('click', function() {
+        
+          noSleep.enable(); // keep the screen on!
+          wakeLockEnabled = true;
+          toggleEl.value = "Wake Lock is enabled";
+        
+      }, false);
 </script>
 
 	  
